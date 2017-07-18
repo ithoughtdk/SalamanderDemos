@@ -1,0 +1,16 @@
+﻿<DataModel xmlns="https://www.ithought.dk/salamander/sdml/1.0"
+           Namespace="Ducklings">
+  <Transaction Type="Nature">
+    <Relation Name="Ponds" Type="PondOf">
+      <Node Type="Pond" Inherit="IdNode:long">
+        <Property Name="DucklingCount" Type="int" />
+      </Node>
+    </Relation>
+    <Transaction Type="Origin">
+    </Transaction>
+    <Transaction Type="TransferDucklings">
+      <Parameter PropertyName="SourcePondId" FieldName="_source" Type="Pond" Key="Id" />
+      <Parameter PropertyName="DestinationPondId" FieldName="_destination" Type="Pond" Key="Id" />
+    </Transaction>
+  </Transaction>
+</DataModel>
