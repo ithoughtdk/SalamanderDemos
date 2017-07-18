@@ -1,4 +1,5 @@
-﻿using Salamander;
+﻿// This is a generated file
+using Salamander;
 
 namespace Ducklings
 {
