@@ -44,7 +44,7 @@ namespace Ducklings
         {
             set
             {
-                _source = Ponds.First(pond => pond.Id == value);
+                _source = Ponds.First(node => node.Id == value);
             }
         }
 
@@ -52,7 +52,7 @@ namespace Ducklings
         {
             set
             {
-                _destination = Ponds.First(pond => pond.Id == value);
+                _destination = Ponds.First(node => node.Id == value);
             }
         }
 
