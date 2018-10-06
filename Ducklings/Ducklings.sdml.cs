@@ -26,17 +26,11 @@ namespace Ducklings
 
     public abstract partial class Nature : Transaction
     {
-        private Directory<PondOf, Pond> _ponds;
-
-        public INodeView<PondOf, Pond> Ponds
-        {
-            get { return _ponds.AsNodeView<PondOf, Pond>(); }
-        }
+        public IDirectory<Pond, long> Ponds { get; private set; }
 
         protected override void OnMount()
         {
-            _ponds = Mount<DirectoryOf<Directory<PondOf, Pond>>,
-                Directory<PondOf, Pond>>();
+            Ponds = Directory<Pond, long>();
         }
     }
 
@@ -50,7 +44,7 @@ namespace Ducklings
         {
             set
             {
-                _source = Ponds.First((r, pond) => pond.Id == value);
+                _source = Ponds.First(pond => pond.Id == value);
             }
         }
 
@@ -58,7 +52,7 @@ namespace Ducklings
         {
             set
             {
-                _destination = Ponds.First((r, pond) => pond.Id == value);
+                _destination = Ponds.First(pond => pond.Id == value);
             }
         }
 

@@ -26,9 +26,9 @@ namespace Ducklings
         {
             using (var origin = database.Mount<Origin>())
             {
-                var sourcePond = origin.Ponds.First((r, pond) => pond.Id == Pond1Id);
+                var sourcePond = origin.Ponds.First(pond => pond.Id == Pond1Id);
                 Console.WriteLine($"Pond #1 has {sourcePond.DucklingCount} ducklings");
-                var destinationPond = origin.Ponds.First((r, pond) => pond.Id == Pond2Id);
+                var destinationPond = origin.Ponds.First(pond => pond.Id == Pond2Id);
                 Console.WriteLine($"Pond #2 has {destinationPond.DucklingCount} ducklings");
             }
         }
@@ -38,10 +38,10 @@ namespace Ducklings
         {
             using (var origin = database.Mount<Origin>())
             {
-                var pond1 = origin.Ponds.Create<PondOf, Pond>();
+                var pond1 = origin.Ponds.Create(Pond1Id);
                 pond1.Id = Pond1Id;
                 pond1.DucklingCount = 20;
-                var pond2 = origin.Ponds.Create<PondOf, Pond>();
+                var pond2 = origin.Ponds.Create(Pond2Id);
                 pond2.Id = Pond2Id;
                 pond2.DucklingCount = 10;
                 origin.Commit();

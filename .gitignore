@@ -1,1 +1,4 @@
 *.suo
+.vs
+obj
+bin
