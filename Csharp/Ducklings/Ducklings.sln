@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ducklings", "Ducklings\Ducklings.csproj", "{9E694390-13A5-4296-8F74-A86F3B79D23E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ducklings", "Ducklings.csproj", "{9E694390-13A5-4296-8F74-A86F3B79D23E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Salamander", "..\..\Salamander\Salamander\Salamander.csproj", "{FA032ABF-1428-4C08-A2E1-7B26C72E250F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Salamander", "..\..\..\Salamander\Salamander\Salamander.csproj", "{FA032ABF-1428-4C08-A2E1-7B26C72E250F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
